@@ -1,53 +1,21 @@
 ---
 tags: koedo
 ---
-
+[toc]
 Decrypt "A Taxonomy of Global Optimization Methods Based on Response Surfaces" by Donald [^jones01]
 ====
 
 [^jones01]: Jones, Donald R. "A taxonomy of global optimization methods based on response surfaces." Journal of global optimization 21.4 (2001): 345-383.
 Jones
-Synopsis(TL;DR)
-----------
-* survey of surrogate-based opt 
-* but mainly kriging (Gaussian process) surrogated
 
-Contents
------------
-
-### 1. Introduction[^1]
-[^1]: Sec.1
+1. Introduction
+--------------
 pp.345-
 
-#### survey & invention of a bunch of **Infill Criterion (\#IC)**
+* survey & invention of a bunch of **Infill Criterion (\#IC)**
 
-### Minimizing a quadratic surface
-
-pp.348-
-
-#### \#1
-
-#### $$\# \#\[Jones01\]
-
-"A Taxonomy of Global Optimization Methods Based on Response Surfaces"
-by Donald
-Jones
-
-## TL;DR
-
-* Survey of surrogate-based opt methods.
-* but mainly kriging (Gaussian process) surrogated.
-
-## Contents
-
-### 1. Introduction
-
-pp.345-
-
-#### survey & invention of a bunch of **Infill Criterion (\#IC)**
-
-### 2. Minimizing a quadratic surface
-
+2. Minimizing a quadratic surface
+--------------
 pp.348-
 
 
@@ -58,118 +26,65 @@ $$
 \newcommand{\ystar}{\mathop{\mathbf{y}^{*}}}
 $$
 
-### Minimizing a interpolating surface
+3. Minimizing a interpolating surface
+--------------
 
 pp.349-
 
-#### \#2
+Method 2:  $$\xstar := \argmin_{\xstar} \ystar$$
 
-#### $$\xstar := \argmin_{\xstar} \ystar$$
-
-### A gentle introduction to kriging
-
+4. A gentle introduction to kriging
+------------
 pp.356-
 
-#### lessong of kriging ( \#GP )
+* a  lesson of kriging ( \#GP )
 
-### Minimizing a statistical lower bound
+5. Minimizing a statistical lower bound
+---------------
 
 pp.362-
 
-#### \#3
+ Method 3:
+ $$\\bold{x}^{next} :=\\ \\mathrm{argmin}\_{\\bold{x}^\*} \\hat{y}(\\bold{x}^\*) - a \\sigma(\\bold{x^\*})$$
 
-#### $$\\bold{x}^{next} :=\\ \\mathrm{argmin}\_{\\bold{x}^\*} \\hat{y}(\\bold{x}^\*) - a \\sigma(\\bold{x^\*})$$
-
-### Maximizing the probability of improvement
-
+6. Maximizing the probability of improvement
+-----------------
 pp.364-
 
-#### \#4
+Method 4:
+$$x^{next} := \\mathrm{argmin}\_{\\bold{x}^\*} \\Pr(T
 
-#### $$x^{next} := \\mathrm{argmin}\_{\\bold{x}^\*} \\Pr(T
+ \!\[Fig.14\](https://cdn.pbrd.co/images/GQDU0gA.png)
 
-#### \!\[Fig.14\](https://cdn.pbrd.co/images/GQDU0gA.png)
-
-### Maximizing Expected Improvement
-
+7. Maximizing Expected Improvement
+----------------------------
 pp.371-
 
-#### \#5 (**EI**)
+ Method 5 (**EI**):
+$$x^{next} := \\mathrm{argmin}\_{\\bold{x}^\*} \\Bbb{E} \[ \\text{u}(y^\*) \]$$ (eq.34,35 (p.371))
 
-#### $$x^{next} := \\mathrm{argmin}\_{\\bold{x}^\*} \\Bbb{E} \[ \\text{u}(y^\*) \]$$ (eq.34,35 (p.371))
-
-### One-stage approach for goal seeking
-
+8. One-stage approach for goal seeking
+---------------------------
 pp.
 373-
 
-#### \#6 = **GoalSeeking** $$\\ni$$ \#1-stage
+Method 6 = **GoalSeeking** $$\\ni$$ \#1-stage
+ \#1-stage + $$\\alpha = \\mathrm{LOIs}\\in$$ Bayes Estimation \#\[Syuuron\]
 
-#### \#1-stage + $$\\alpha = \\mathrm{LOIs}\\in$$ Bayes Estimation \#\[Syuuron\]
+Cf. \#\[Syuuron\]
 
-#### Cf. \#\[Syuuron\]
+### what about \#overfitting ?
 
-#### what about \#overfitting ?
-
-### One-stage approach for optimization
-
+9. One-stage approach for optimization
+-----------------------------
 pp. 375-{x}^{next} :=\ \mathrm{argmin}\_{\bold{x}^*} y^*$$
 
-### Minimizing a interpolating surface
-
+10.  Minimizing a interpolating surface
+-----------------------------
 pp.349-
 
-#### \#2
+Method 2:
+$$\\bold{x}^{next} :=\\ \\mathrm{argmin}\_{\\bold{x}^\*} y^\*$$
 
-#### $$\\bold{x}^{next} :=\\ \\mathrm{argmin}\_{\\bold{x}^\*} y^\*$$
-
-### A gentle introduction to kriging
-
-pp.356-
-
-#### lessong of kriging ( \#GP )
-
-### Minimizing a statistical lower bound
-
-pp.362-
-
-#### \#3
-
-#### $$\\bold{x}^{next} :=\\ \\mathrm{argmin}\_{\\bold{x}^\*} \\hat{y}(\\bold{x}^\*) - a \\sigma(\\bold{x^\*})$$
-
-### Maximizing the probability of improvement
-
-pp.364-
-
-#### \#4
-
-#### $$x^{next} := \\mathrm{argmin}\_{\\bold{x}^\*} \\Pr(T
-
-#### \!\[Fig.14\](https://cdn.pbrd.co/images/GQDU0gA.png)
-
-### Maximizing Expected Improvement
-
-pp.371-
-
-#### \#5 (**EI**)
-
-#### $$x^{next} := \\mathrm{argmin}\_{\\bold{x}^\*} \\Bbb{E} \[ \\text{u}(y^\*) \]$$ (eq.34,35 (p.371))
-
-### One-stage approach for goal seeking
-
-pp.
-373-
-
-#### \#6 = **GoalSeeking** $$\\ni$$ \#1-stage
-
-#### \#1-stage + $$\\alpha = \\mathrm{LOIs}\\in$$ Bayes Estimation \#\[Syuuron\]
-
-#### Cf. \#\[Syuuron\]
-
-#### what about \#overfitting ?
-
-### One-stage approach for optimization
-
-pp. 375-
 
 > Written with [StackEdit](https://stackedit.io/).
