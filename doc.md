@@ -1,3 +1,7 @@
+---
+tags: koedo
+---
+
 Decrypt "A Taxonomy of Global Optimization Methods Based on Response Surfaces" by Donald [^jones01]
 ====
 
