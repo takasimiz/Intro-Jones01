@@ -2,59 +2,54 @@
 tags: koedo
 ---
 [toc]
-Decrypt "A Taxonomy of Global Optimization Methods Based on Response Surfaces" by Donald [^jones01]
-====
 
+Decrypt "A Taxonomy of Global Optimization Methods Based on Response Surfaces" by Donald [^jones01]
 [^jones01]: Jones, Donald R. "A taxonomy of global optimization methods based on response surfaces." Journal of global optimization 21.4 (2001): 345-383.
 Jones
 
-1. Introduction
---------------
-pp.345-
-
-* survey & invention of a bunch of **Infill Criterion (\#IC)**
-
-2. Minimizing a quadratic surface
---------------
-pp.348-
-
-
- Mehod1: 
 $$
 \newcommand{\argmin}{\mathop{\mathrm{arg\,min}}}
-\newcommand{\xstar}{\mathop{\mathbf{x}^{*}}}
-\newcommand{\ystar}{\mathop{\mathbf{y}^{*}}}
+\newcommand{\xstar}{\mathop{\mathbf{x}^{\ast}}}
+\newcommand{\ystar}{\mathop{\mathbf{y}^{\ast}}}
+\newcommand{\xnext}{\mathop{\mathbf{x}^{n+1}}}
 $$
 
-3. Minimizing a interpolating surface
+
+1. Introduction (pp.345-)
 --------------
 
-pp.349-
+* survey & invention of a bunch of **Infill Criterion (#IC)**
 
-Method 2:  $$\xstar := \argmin_{\xstar} \ystar$$
+2. Minimizing a quadratic surface (pp.348)
+--------------
 
-4. A gentle introduction to kriging
+ Mehod1: 
+
+3. Minimizing a interpolating surface (pp.349-)
+--------------
+
+Method 2:  $$\xnext := \argmin_{\xstar} \ystar$$
+
+4. A gentle introduction to kriging (pp.356-)
 ------------
-pp.356-
 
-* a  lesson of kriging ( \#GP )
+* a brief lesson of **Kriging** ( $ \approx $ **GP**)
 
-5. Minimizing a statistical lower bound
+5. Minimizing a statistical lower bound (pp.362-)
 ---------------
-
-pp.362-
-
  Method 3:
- $$\\bold{x}^{next} :=\\ \\mathrm{argmin}\_{\\bold{x}^\*} \\hat{y}(\\bold{x}^\*) - a \\sigma(\\bold{x^\*})$$
+ $$ \xnext := \argmin_{\xstar} \{\hat{y}(\xstar) - a \sigma(\xstar) \}$$
 
 6. Maximizing the probability of improvement
 -----------------
 pp.364-
 
 Method 4:
-$$x^{next} := \\mathrm{argmin}\_{\\bold{x}^\*} \\Pr(T
+$$
+\xnext := \argmin_\xstar
+$$
 
- \!\[Fig.14\](https://cdn.pbrd.co/images/GQDU0gA.png)
+[Fig.14](https://cdn.pbrd.co/images/GQDU0gA.png)
 
 7. Maximizing Expected Improvement
 ----------------------------
