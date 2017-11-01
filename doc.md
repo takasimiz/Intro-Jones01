@@ -72,52 +72,48 @@ $$ \begin{equation}
  \label{eq:m3}
 \end{equation}  $$
 
-6. Maximizing the probability of improvement
+6. Maximizing the probability of improvement (pp.364-)
 -----------------
-pp.364-
 
 ### Method 4:
 $$ \begin{equation}
-\xnext := \argmin_\xstar
+\xnext := \argmin_{\xstar} p(\ystar|\xstar,\D^n,\M)
 \label{eq:m4}
 \end{equation}  $$
 
 [Fig.14](https://cdn.pbrd.co/images/GQDU0gA.png)
 
-7. Maximizing Expected Improvement
+7. Maximizing Expected Improvement (pp.371-)
 ----------------------------
-pp.371-
 
 ### Method 5 (**EI**):
 $$ \begin{equation}
-\xnext := \argmin_{\xstar} \E[\text{u}(\ystar)) ]
+\xnext := \argmin_{\xstar} \E[\text{u}(\ystar))|\xstar,\D^n,\M ]
 \label{eq:m5}
 \end{equation}  $$
 
  (eq.34,35 (p.371))
 
-8. One-stage approach for goal seeking
+8. One-stage approach for goal seeking (pp.373-)
 ---------------------------
-pp.
-373-
 
-### Method 6 = **GoalSeeking** $$\\ni$$ \#1-stage
- \#1-stage + 
-$$ \begin{equation}
-\\alpha = \\mathrm{LOIs}\\in$$ Bayes Estimation \#\[Syuuron\]
-\label{eq:m6}
-\end{equation}  $$
+### Method 6 (= **GoalSeeking**)
 
-Cf. \#\[Syuuron\]
-
-### what about \#overfitting ?
-
-9. One-stage approach for optimization (pp.375-)
------------------------------
 $$ \begin{equation}
 \xnext := \argmin_{\xstar} \E[\ystar|\xstar,\D^n,y^{goal}]
 \label{eq:mmmm}
 \end{equation}  $$
+
+ 1-stage + $\alpha = \mathrm{LOIs}\in$ Bayes Estimation [Syuuron].
+p(y*|x*,D,y^g) p(x^g, y^g) = p(y^gp(
+but,
+
+ $p(x^g,y^g) \neq$ prob of opt.[Syuuron]
+
+### what about overfitting ?
+
+9. One-stage approach for optimization (pp.375-)
+-----------------------------
 
 10.  Minimizing a interpolating surface (pp.349-)
 -----------------------------
