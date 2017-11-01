@@ -3,14 +3,27 @@ tags: koedo
 ---
 [toc]
 
-Decrypt *"A Taxonomy of Global Optimization Methods Based on Response Surfaces"*[^jones01] by Donald Jones
-[^jones01]: Jones, Donald R. "A taxonomy of global optimization methods based on response surfaces." Journal of global optimization 21.4 (2001): 345-383.
+Reading Memo
+===========
+
+> [Jones01]  Jones, Donald R. "A taxonomy of global optimization methods based on response surfaces." Journal of global optimization 21.4 (2001): 345-383. 
+
+EGO
+
+jones
+
+*[jones]:  jon
+*[EGO]: Efficient Global Optimization
+
+jones
 
 $$
 \newcommand{\argmin}{\mathop{\mathrm{arg\,min}}}
 \newcommand{\xstar}{\mathop{\mathbf{x}^{\ast}}}
 \newcommand{\ystar}{\mathop{\mathbf{y}^{\ast}}}
 \newcommand{\xnext}{\mathop{\mathbf{x}^{n+1}}}
+\newcommand{\E}{\mathop{\Bbb{E}}\nolimits}
+\newcommand{\D}{\mathop{\mathcal{D}}\nolimits}
 $$
 
 
@@ -19,10 +32,10 @@ $$
 
 * survey & invention of a bunch of **Infill Criterion (#IC)**
 
-2. Minimizing a quadratic surface (pp.348)
+2. Minimizing a quadratic surface (p.348)
 --------------
-
- Method1: 
+E[y*|x*,D^n]
+ Method1: $$ \xnext := \argmin_{\xstar} \Bbb{E} $$
 
 3. Minimizing a interpolating surface (pp.349-)
 --------------
