@@ -22,7 +22,7 @@ $$
 2. Minimizing a quadratic surface (pp.348)
 --------------
 
- Mehod1: 
+ Method1: 
 
 3. Minimizing a interpolating surface (pp.349-)
 --------------
