@@ -8,22 +8,14 @@ Reading Memo
 
 > [Jones01]  Jones, Donald R. "A taxonomy of global optimization methods based on response surfaces." Journal of global optimization 21.4 (2001): 345-383. 
 
-EGO
-
-jones
-
-*[jones]:  jon
-*[EGO]: Efficient Global Optimization
-
-jones
-
 $$
 \newcommand{\argmin}{\mathop{\mathrm{arg\,min}}}
 \newcommand{\xstar}{\mathop{\mathbf{x}^{\ast}}}
-\newcommand{\ystar}{\mathop{\mathbf{y}^{\ast}}}
+\newcommand{\ystar}{\mathop{y^{\ast}}\nolimits}
 \newcommand{\xnext}{\mathop{\mathbf{x}^{n+1}}}
 \newcommand{\E}{\mathop{\Bbb{E}}\nolimits}
 \newcommand{\D}{\mathop{\mathcal{D}}\nolimits}
+\newcommand{\M}{\mathop{\mathcal{M}}\nolimits}
 $$
 
 
@@ -34,13 +26,16 @@ $$
 
 2. Minimizing a quadratic surface (p.348)
 --------------
-E[y*|x*,D^n]
- Method1: $$ \xnext := \argmin_{\xstar} \Bbb{E} $$
+ Method 1: $$ ic1 = \xnext := \argmin_{\xstar}\ystar(\xstar; \D^n,\M_{quad})$$
+ $$ =   \argmin_{\xstar}\E[\ystar|\xstar,\D^n]$$
+$$
+
 
 3. Minimizing a interpolating surface (pp.349-)
 --------------
 
-Method 2:  $$\xnext := \argmin_{\xstar} \ystar$$
+
+ Method 2: $$ \xnext := \argmin_{\xstar}\E[\ystar|\xstar,\D^n]$$
 
 4. A gentle introduction to kriging (pp.356-)
 ------------
