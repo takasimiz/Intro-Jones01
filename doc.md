@@ -30,6 +30,13 @@ $$
  $$ =   \argmin_{\xstar}\E[\ystar|\xstar,\D^n]$$
 $$
 
+$$
+\begin{equation}
+  \int_0^\infty \frac{x^3}{e^x-1}\,dx = \frac{\pi^4}{15}
+\label{eq:sample}
+\end{equation}
+$$
+this eq. is eq $\eqref{eq:sample}$ .
 
 3. Minimizing a interpolating surface (pp.349-)
 --------------
