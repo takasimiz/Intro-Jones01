@@ -5,7 +5,6 @@ tags: koedo
 
 Decrypt *"A Taxonomy of Global Optimization Methods Based on Response Surfaces"*[^jones01] by Donald Jones
 [^jones01]: Jones, Donald R. "A taxonomy of global optimization methods based on response surfaces." Journal of global optimization 21.4 (2001): 345-383.
-Jones
 
 $$
 \newcommand{\argmin}{\mathop{\mathrm{arg\,min}}}
