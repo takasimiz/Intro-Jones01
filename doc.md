@@ -3,7 +3,7 @@ tags: koedo
 ---
 [toc]
 
-Reading Memo
+Notes of [Jones01]
 ===========
 
 > [Jones01]  Jones, Donald R. "A taxonomy of global optimization methods based on response surfaces." Journal of global optimization 21.4 (2001): 345-383. 
@@ -19,6 +19,7 @@ $$
 $$
 
 
+
 1. Introduction (pp.345-)
 --------------
 
@@ -26,23 +27,34 @@ $$
 
 2. Minimizing a quadratic surface (p.348)
 --------------
- Method 1: $$ ic1 = \xnext := \argmin_{\xstar}\ystar(\xstar; \D^n,\M_{quad})$$
- $$ =   \argmin_{\xstar}\E[\ystar|\xstar,\D^n]$$
-$$
 
-$$
-\begin{equation}
-  \int_0^\infty \frac{x^3}{e^x-1}\,dx = \frac{\pi^4}{15}
-\label{eq:sample}
-\end{equation}
-$$
-this eq. is eq $\eqref{eq:sample}$ .
+### Method 1  {#m1}
+
+ $$ \begin{equation}
+ \xnext := \argmin_{\xstar}quad(\xstar; \D^n) 
+ \label{eq:m1}
+\end{equation}  $$
+
+
+the $f(\xstar; \D^n)$ can $ \eqref{eq:m1}$ can interpret as $\E[\ystar|\xstar,\D^n,\M_{quad}]$. So $\eqref{eq:m1}$ is
+$$ \begin{equation}
+   \argmin_{\xstar}\E[\ystar|\xstar,\D^n,\M_{quad}] 
+\end{equation} $$ 
+
 
 3. Minimizing a interpolating surface (pp.349-)
 --------------
 
+### Method 2 {#m2}
 
- Method 2: $$ \xnext := \argmin_{\xstar}\E[\ystar|\xstar,\D^n]$$
+$$ 
+\begin{equation} 
+\xnext := \argmin_{\xstar}\E[\ystar|\xstar,\D^n,\M_{GP}]
+\label{eq:m2}
+\end{equation}$$ 
+
+= [Method 1](#m1), we find the value of an interesting integral:
+
 
 4. A gentle introduction to kriging (pp.356-)
 ------------
