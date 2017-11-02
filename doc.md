@@ -3,9 +3,6 @@ tags: koedo
 title: Notes of Jones01
 ---
 
-Notes of [Jones01]
-===========
-
 TOC 
 
 [toc]
@@ -30,7 +27,6 @@ $$
 \newcommand{\M}{\mathop{\mathcal{M}}\nolimits}
 $$
 
-
 Sec 1: "Introduction" (pp.345-)
 --------------
 `skip();`
@@ -45,14 +41,10 @@ $$ \begin{equation}
  \xnext := \argmin_{\xstar}\text{quad}(\xstar; \D^n) 
  \label{eq:m1}
 \end{equation}  $$
-where
+where $\D^n := \{ (\mathbf{x}^i, y^i)_i \}_{i\in\{1,..,n\}}$ is the observations at $n$ iter.
 
-$$
-\D^n := \{ (\mathbf{x}^i, y^i)_i \}_{i\in\{1,..,n\}}.
-$$
-
-- the hard-core *exploitation* biased approach
-- the $f(\xstar; \D^n)$ can $ \eqref{eq:m1}$ can interpret as $\E[\ystar|\xstar,\D^n,\M_{quad}]$. So $\eqref{eq:m1}$ is
+- a hard-core *exploitation* biased approach
+- the $f(\xstar; \D^n)$ of eq. $ \eqref{eq:m1}$ can interpret as $\E[\ystar|\xstar,\D^n,\M_{quad}]$. So eq. $\eqref{eq:m1}$ is the same thing as
 
 $$ \begin{equation}
    \argmin_{\xstar}\E[\ystar|\xstar,\D^n,\M_{quad}]. 
@@ -81,11 +73,10 @@ Sec 5: "Minimizing a statistical lower bound" (pp.362-)
 ### Method 3
 $$ \begin{equation}
 \xnext := \argmin_{\xstar} \{\E[\ystar|\xstar,\D^n,\M] - \kappa \sigma(\xstar) \} (\kappa>0).
- \label{eq:m3}
+\label{eq:m3}
 \end{equation}  $$
 
-
-- Fig. 13 at p. 363 shows a strong bias toward *exploitation*
+- Fig.13 at p.363 shows a strong bias toward *exploitation*
 
 Sec 6: "Maximizing the probability of improvement" (pp.364-)
 -----------------
@@ -96,7 +87,7 @@ $$ \begin{equation}
 \label{eq:m4}
 \end{equation}  $$
 
-- see [Fig. 14 at p.364](https://cdn.pbrd.co/images/GQDU0gA.png)
+- see [Fig. 14 (p.364)](https://cdn.pbrd.co/images/GQDU0gA.png)
 - the underdog for [**EI** (method 5)](#m5).
 
 
@@ -110,8 +101,8 @@ $$ \begin{equation}
 \label{eq:m5}
 \end{equation}  $$
 
--  = **Expected Improvement**
-- eq. $\eqref{eq:m5} $ is the same thing as eq. 34&35 (p.371)
+-  == **Expected Improvement**
+- eq. $\eqref{eq:m5} $ is the same thing as eq. 34, 35 (p.371)
 
 Sec 8: "One-stage approach for goal seeking" (pp.373-)
 ---------------------------
@@ -126,9 +117,8 @@ $$ \begin{equation}
 - = **GoalSeeking**
 	- avoid **overfitting** (see [fig.22 (p.375)](https://cdn.pbrd.co/images/GQ6tLnY.png)) by a fake data $y^{fake}$.
 - 1-stage + $\alpha = \mathrm{LOIs}\in$ Bayes Estimation [Syuuron].
-p(y*|x*,D,y^g) p(x^g, y^g) = p(y^gp(
-but,
-- $p(\mathbf{x}^{fake},y^{fake}) \neq$ (prob. of opt.) [Syuuron]
+- but $p(\mathbf{x}^{fake},y^{fake}) \neq$ (prob. of opt.) [Syuuron].
+
 
 Sec 9: "Minimizing a interpolating surface" (pp.349-)
 -----------------------------
