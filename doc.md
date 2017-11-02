@@ -115,32 +115,26 @@ $$ \begin{equation}
 ### Method 6 {#m6}
 
 $$ \begin{equation}
-\xnext := \argmin_{\xstar} \E[\ystar|\xstar,\D^n,y^{goal}].
+\xnext := \argmin_{\xstar} \E[\ystar|\xstar,\D^n,y^{fake}].
 \label{eq:mmmm}
 \end{equation}  $$
 
 - = **GoalSeeking**
+	- avoid **overfitting** (see [fig.22 (p.375)](https://cdn.pbrd.co/images/GQ6tLnY.png)) by a fake data $y^{fake}$.
 - 1-stage + $\alpha = \mathrm{LOIs}\in$ Bayes Estimation [Syuuron].
 p(y*|x*,D,y^g) p(x^g, y^g) = p(y^gp(
 but,
+- $p(\mathbf{x}^{fake},y^{fake}) \neq$ (prob. of opt.) [Syuuron]
 
- $p(x^g,y^g) \neq$ prob of opt.[Syuuron]
-
-### what about overfitting ?
-
-9. One-stage approach for optimization (pp.375-)
+9. Minimizing a interpolating surface (pp.349-)
 -----------------------------
 
 - a heuristic of [method 6](#m6) (not sure).
 
-
-10.  Minimizing a interpolating surface (pp.349-)
------------------------------
-    skip();
-
 11. Conclusions (pp. 377-)
 -----------------------------
-    skip();
+    return 0;
+
 
 --------------
 > Written with [StackEdit](https://stackedit.io/).
