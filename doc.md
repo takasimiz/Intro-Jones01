@@ -1,11 +1,12 @@
 ---
 tags: koedo
+title: Notes of Jones01
 ---
 
 Notes of [Jones01]
 ===========
 
-ta
+TOC 
 
 [toc]
 
@@ -15,8 +16,8 @@ ta
 TL; DR
 ------------
 
-- survey & invention of a bunch of **Infill Criteria** for responce-surface-assisted global opt. methods
-- (surrogate model, metamodel)
+- survey & invention of a bunch of **Infill Criteria** for response-surface-assisted global opt. methods
+- tremendousness: the invention of the **Expected Improvement (EI)** algorithm.
 
 $$
 \newcommand{\argmin}{\mathop{\mathrm{arg\,min}}}
@@ -30,13 +31,12 @@ $$
 $$
 
 
-
-1. Introduction (pp.345-)
+Sec 1: "Introduction" (pp.345-)
 --------------
 `skip();`
 
 
-2. Minimizing a quadratic surface (p.348)
+Sec 2: "Minimizing a quadratic surface" (p.348)
 --------------
 
 ### Method 1 {#m1}
@@ -59,7 +59,7 @@ $$ \begin{equation}
 \end{equation} $$ 
 
 
-3. Minimizing a interpolating surface (pp.349-)
+Sec. 3: "Minimizing a interpolating surface" (pp.349-)
 --------------
 
 ### Method 2 {#m2}
@@ -72,22 +72,22 @@ where $\varphi$ is a some covariance function (p.350, eq. 2)(p.356, eq. 5).
 - == Method 1 
 - The difference between the two methods is just using $\M_{GP(\varphi)}$ xor $\M_{quad}$.
 
-4. A gentle introduction to kriging (pp.356-)
+Sec 4: "A gentle introduction to kriging" (pp.356-)
 ------------
-* a tutorial of **Kriging** ( $ \approx $ **GP**)
+- a tutorial of **Kriging** ( $ \approx $ **GP**)
 
-5. Minimizing a statistical lower bound (pp.362-)
+Sec 5: "Minimizing a statistical lower bound" (pp.362-)
 ---------------
 ### Method 3
 $$ \begin{equation}
-\xnext := \argmin_{\xstar} \{\E[\ystar] - \kappa \sigma(\xstar) \}.
+\xnext := \argmin_{\xstar} \{\E[\ystar|\xstar,\D^n,\M] - \kappa \sigma(\xstar) \} (\kappa>0).
  \label{eq:m3}
 \end{equation}  $$
 
 
-- Fig. 13 at p. 363 shows a (the?) strong bias toward *exploitation*
+- Fig. 13 at p. 363 shows a strong bias toward *exploitation*
 
-6. Maximizing the probability of improvement (pp.364-)
+Sec 6: "Maximizing the probability of improvement" (pp.364-)
 -----------------
 
 ### Method 4 {#m4}
@@ -100,7 +100,7 @@ $$ \begin{equation}
 - the underdog for [**EI** (method 5)](#m5).
 
 
-7. Maximizing Expected Improvement (pp.371-)
+Sec 7: "Maximizing Expected Improvement" (pp.371-)
 ----------------------------
 
 ### Method 5 {#m5}
@@ -113,7 +113,7 @@ $$ \begin{equation}
 -  = **Expected Improvement**
 - eq. $\eqref{eq:m5} $ is the same thing as eq. 34&35 (p.371)
 
-8. One-stage approach for goal seeking (pp.373-)
+Sec 8: "One-stage approach for goal seeking" (pp.373-)
 ---------------------------
 
 ### Method 6 {#m6}
@@ -130,12 +130,12 @@ p(y*|x*,D,y^g) p(x^g, y^g) = p(y^gp(
 but,
 - $p(\mathbf{x}^{fake},y^{fake}) \neq$ (prob. of opt.) [Syuuron]
 
-9. Minimizing a interpolating surface (pp.349-)
+Sec 9: "Minimizing a interpolating surface" (pp.349-)
 -----------------------------
 
 - a heuristic of [method 6](#m6) (not sure).
 
-11. Conclusions (pp. 377-)
+sec 10: "Conclusions" (pp. 377-)
 -----------------------------
     return 0;
 
