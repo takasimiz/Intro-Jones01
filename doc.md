@@ -1,10 +1,14 @@
 ---
 tags: koedo
 ---
-[toc]
 
 Notes of [Jones01]
 ===========
+
+ta
+
+[toc]
+
 
 > [Jones01]  Jones, Donald R. "A taxonomy of global optimization methods based on response surfaces." Journal of global optimization 21.4 (2001): 345-383. 
 
@@ -75,11 +79,11 @@ where $\varphi$ is a some covariance function (p.350, eq. 2)(p.356, eq. 5).
 5. Minimizing a statistical lower bound (pp.362-)
 ---------------
 ### Method 3
-
 $$ \begin{equation}
 \xnext := \argmin_{\xstar} \{\E[\ystar] - \kappa \sigma(\xstar) \}.
  \label{eq:m3}
 \end{equation}  $$
+
 
 - Fig. 13 at p. 363 shows a (the?) strong bias toward *exploitation*
 
